@@ -38,3 +38,9 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.box:hover {
+  cursor: pointer;
+  border-color: rgb(233, 199, 48);
+  transform: scale(1.05);
+}
