@@ -27,62 +27,56 @@ console.log(box);
 
 
 document.addEventListener('keydown', (e)=> {
-  if(e.code === 'KeyA') {
+  switch(e.code) {
+    case 'KeyA':
     a.classList.add('press');
     soundA.currentTime = 0;
     soundA.play();
-  } else if(e.code === 'KeyS') {
+    break;
+    case 'KeyS':
     s.classList.add('press');
     soundS.currentTime = 0;
     soundS.play();
-  } else if(e.code === 'KeyD') {
+    break;
+    case 'KeyD':
     d.classList.add('press');
     soundD.currentTime = 0;
     soundD.play();
-  } else if(e.code === 'KeyF') {
+    break;
+    case 'KeyF':
     f.classList.add('press');
     soundF.currentTime = 0;
     soundF.play();
-  } else if(e.code === 'KeyG') {
+    break;
+    case 'KeyG':
     g.classList.add('press');
     soundG.currentTime = 0;
     soundG.play();
-  } else if(e.code === 'KeyH') {
+    break;
+    case'KeyH':
     h.classList.add('press');
     soundH.currentTime = 0;
     soundH.play();
-  } else if(e.code === 'KeyJ') {
+    break;
+    case 'KeyJ':
     j.classList.add('press');
     soundJ.currentTime = 0;
     soundJ.play();
-  } else if(e.code === 'KeyK') {
+    break;
+    case 'KeyK':
     k.classList.add('press');
     soundK.currentTime = 0;
     soundK.play();
-  } else if(e.code === 'KeyL') {
+    break;
+    case 'KeyL':
     l.classList.add('press');
     soundL.currentTime = 0;
     soundL.play();
+    break;
   }})
 
 
   box.forEach(k => k.addEventListener('transitionend', (e) => {
-  
       box.forEach(k => k.classList.remove('press'));
-  
-
   }))
 
-
-    
-// for(let elem in box)addEventListener('click', () => {
-//   addClassName(elem);
-// })
-
-// function addClassName(element) {
-//   element.addClassName('playing');
-// }
-
-// function play(sound) {
-//   sound.play();
-// }
