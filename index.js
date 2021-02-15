@@ -22,38 +22,67 @@ const k = document.querySelector('.k');
 const l = document.querySelector('.l');
 
 
-a.addEventListener('click', ()=> {
-  soundA.play();
-})
+const box = document.querySelectorAll('.box');
+console.log(box);
 
-s.addEventListener('click', ()=> {
-  soundS.play();
-})
 
-d.addEventListener('click', ()=> {
-  soundD.play();
-})
+document.addEventListener('keydown', (e)=> {
+  if(e.code === 'KeyA') {
+    a.classList.add('press');
+    soundA.currentTime = 0;
+    soundA.play();
+  } else if(e.code === 'KeyS') {
+    s.classList.add('press');
+    soundS.currentTime = 0;
+    soundS.play();
+  } else if(e.code === 'KeyD') {
+    d.classList.add('press');
+    soundD.currentTime = 0;
+    soundD.play();
+  } else if(e.code === 'KeyF') {
+    f.classList.add('press');
+    soundF.currentTime = 0;
+    soundF.play();
+  } else if(e.code === 'KeyG') {
+    g.classList.add('press');
+    soundG.currentTime = 0;
+    soundG.play();
+  } else if(e.code === 'KeyH') {
+    h.classList.add('press');
+    soundH.currentTime = 0;
+    soundH.play();
+  } else if(e.code === 'KeyJ') {
+    j.classList.add('press');
+    soundJ.currentTime = 0;
+    soundJ.play();
+  } else if(e.code === 'KeyK') {
+    k.classList.add('press');
+    soundK.currentTime = 0;
+    soundK.play();
+  } else if(e.code === 'KeyL') {
+    l.classList.add('press');
+    soundL.currentTime = 0;
+    soundL.play();
+  }})
 
-f.addEventListener('click', ()=> {
-  soundF.play();
-})
 
-g.addEventListener('click', ()=> {
-  soundG.play();
-})
+  box.forEach(k => k.addEventListener('transitionend', (e) => {
+  
+      box.forEach(k => k.classList.remove('press'));
+  
 
-h.addEventListener('click', ()=> {
-  soundH.play();
-})
+  }))
 
-j.addEventListener('click', ()=> {
-  soundJ.play();
-})
 
-k.addEventListener('click', ()=> {
-  soundK.play();
-})
+    
+// for(let elem in box)addEventListener('click', () => {
+//   addClassName(elem);
+// })
 
-l.addEventListener('click', ()=> {
-  soundL.play();
-})
+// function addClassName(element) {
+//   element.addClassName('playing');
+// }
+
+// function play(sound) {
+//   sound.play();
+// }
